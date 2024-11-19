@@ -1,10 +1,6 @@
 # php-program
 
-### Description of the Task
 
-You aim to build a simple product management system using PHP, Bootstrap, and HTML with two pages: one for inserting data and the other for displaying it. Here's the breakdown:
-
----
 
 #### **Page 1: Insert Product Data**
 - **Purpose**: Allows the user to add new product information.
