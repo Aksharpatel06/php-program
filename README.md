@@ -1,7 +1,5 @@
 # php-program
 
-
-
 #### **Page 1: Insert Product Data**
 - **Purpose**: Allows the user to add new product information.
 - **Features**:
