@@ -140,6 +140,8 @@ A form to input update product details..
 Watch the video demonstration of the project to see it in action:
 
 
+https://github.com/user-attachments/assets/6c4a0980-dcc3-4723-bccf-1e089acd940e
+
 
 ---
 
