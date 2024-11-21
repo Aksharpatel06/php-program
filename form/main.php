@@ -13,15 +13,13 @@
     <div class="container py-5">
         <div class="text-center mb-5">
             <h1 class="display-4">Product Management</h1>
-            <p class="lead">Add and view your products seamlessly.</p>
+            <p class="lead">Add your products seamlessly.</p>
         </div>
         <?php
 
         include("config/config.php");
 
         $c1 = new Config();
-        $c1->connectDatabase();
-        $result = $c1->selectDatabase();
 
         if (isset($_REQUEST['submit'])) {
             $product = $_REQUEST['name'];
