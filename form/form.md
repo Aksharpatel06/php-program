@@ -128,6 +128,11 @@ A table displaying all the stored products.
 
 ![scn2](https://github.com/user-attachments/assets/990091ec-ca85-49b5-9c2d-c85e79efb956)
 
+### Update Product Page
+A form to input update product details..
+
+![scn3](https://github.com/user-attachments/assets/4fbff67c-a31d-4005-925d-ab15d9181fe0)
+
 ---
 
 ## Video Demonstration
