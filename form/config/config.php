@@ -9,7 +9,7 @@ class Config
     private $create;
 
 
-    public function connectDatabase()
+    public function __construct()
     {
         $this->create = mysqli_connect($this->localhost, $this->username, $this->password, $this->database, );
     }
@@ -31,6 +31,20 @@ class Config
         $selectData = mysqli_query($this->create, $query);
 
         return $selectData;
+    }
+
+    function removeProduct($id)
+    {
+        $query = "DELETE FROM product WHERE id=$id";
+        mysqli_query($this->create, $query);
+    }
+
+
+
+    function updateProduct($id, $name, $price, $category)
+    {
+        $query = "UPDATE product SET name='$name',prize=$price,category='$category' WHERE id=$id";
+        mysqli_query($this->create, $query);
     }
 }
 
