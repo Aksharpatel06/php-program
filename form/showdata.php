@@ -11,12 +11,29 @@
 
 <body>
     <?php
-
+    session_start();
     include("config/config.php");
 
     $c1 = new Config();
-    $c1->connectDatabase();
     $result = $c1->selectDatabase();
+
+
+    if (isset($_REQUEST['delete'])) {
+        $id = $_REQUEST['deleteId'];
+
+        $c1->removeProduct($id);
+        header('Refresh:0');
+    }
+
+    if(isset($_REQUEST['edit'])) {
+        $_SESSION['id'] = $_REQUEST['deleteId'];
+        $_SESSION['name'] = $_REQUEST['name'];
+        $_SESSION['prize'] = $_REQUEST['prize'];
+        $_SESSION['category'] = $_REQUEST['category'];
+
+        echo $_REQUEST['name'];
+        header("Location: updatedata.php");
+    }
 
     ?>
     <div class="row mt-5">
@@ -31,6 +48,7 @@
                                 <th scope="col">Product Title</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Category</th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -40,6 +58,18 @@
                                     <td><?php echo $res['name']; ?></td>
                                     <td><?php echo $res['prize']; ?></td>
                                     <td><?php echo $res['category']; ?></td>
+                                    <td>
+                                        <form method="post">
+                                            
+                                            <input type="hidden" name="deleteId" value="<?php echo $res['id']; ?>">
+                                            <input type="hidden" name="name" value="<?php echo $res['name']; ?>">
+                                            <input type="hidden" name="prize" value="<?php echo $res['prize']; ?>">
+                                            <input type="hidden" name="category" value="<?php echo $res['category']; ?>">
+                                            
+                                            <button name='edit' class="btn btn-warning">Edit</button>
+                                            <button name='delete' class="btn btn-danger">delete</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             <?php } ?>
                         </tbody>
