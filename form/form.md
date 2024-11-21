@@ -110,8 +110,6 @@ This project is a simple **Product Management System** built with **PHP** and **
 ---
 
 
----
-
 ### Notes
 - Ensure the database credentials are correct to avoid connection errors.
 - Use `header('Refresh:0');` or `header('Location: ...')` after database operations to reflect changes immediately.
