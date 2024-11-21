@@ -1,78 +1,122 @@
 # Product Management System
 
-This is a simple **Product Management System** built using PHP, MySQL, and Bootstrap. It allows users to add products and view a list of all added products.
+---
+
+#### Overview
+This project is a simple **Product Management System** built with **PHP** and **MySQL**, integrated with **Bootstrap** for styling. The system allows users to perform CRUD (Create, Read, Update, Delete) operations on products seamlessly. 
 
 ---
 
-## Features
-
-- **Add New Products**: Users can add product details, including the product name, price, and category.
-- **View Products**: Users can see all the products listed in a table format with details such as ID, name, price, and category.
-- **Navigation**: Easy navigation between adding products and viewing the product list.
-
----
-
-## Technologies Used
-
-- **Frontend**: HTML, CSS (via Bootstrap 5.3.3)
-- **Backend**: PHP
-- **Database**: MySQL
+### Features
+1. **Add Products:** Users can add new products by specifying the name, price, and category.
+2. **View Products:** Displays a list of all products stored in the database in a tabular format.
+3. **Edit Products:** Modify product details such as name, price, and category.
+4. **Delete Products:** Remove unwanted products from the database.
+5. **Navigation:** Buttons to easily navigate between pages.
 
 ---
 
-## Prerequisites
-
-Before running the application, ensure you have the following installed:
-
-1. A local server like XAMPP, WAMP, or MAMP.
-2. PHP version 7.0 or higher.
-3. MySQL database.
+### Folder Structure
+```
+/project-folder
+├── config/
+│   └── config.php    // Contains the database connection and CRUD logic
+├── index.php         // Main page for adding products
+├── showdata.php      // Displays the product list
+├── updatedata.php    // Page for updating product details
+└── README.md         // Documentation file
+```
 
 ---
 
-## Setup Instructions
+### Requirements
+- **Server:** Localhost (e.g., XAMPP, WAMP, or MAMP)
+- **PHP:** Version 7.4 or higher
+- **MySQL:** Version 5.7 or higher
+- **Bootstrap:** Version 5.3.3 (CDN included in the project)
 
-1. Clone this repository or download the files.
-2. Set up a MySQL database with the following credentials:
-   - **Host**: `localhost`
-   - **Username**: `root`
-   - **Password**: (leave blank if using default configuration)
-   - **Database Name**: `student`
+---
 
-3. Import the database schema:
-   - Locate the `product.sql` file (if provided) or use the following SQL command to create the `product` table:
+### Setup Instructions
+1. **Clone or Download** the repository to your local machine.
+2. Place the project folder in your web server's root directory (`htdocs` for XAMPP).
+3. **Import Database:**
+   - Open **phpMyAdmin** in your browser.
+   - Create a new database named `student`.
+   - Import the following SQL script to create the necessary table:
      ```sql
-     CREATE DATABASE student;
-
-     USE student;
-
      CREATE TABLE product (
          id INT AUTO_INCREMENT PRIMARY KEY,
          name VARCHAR(255) NOT NULL,
-         prize DECIMAL(10, 2) NOT NULL,
+         prize FLOAT NOT NULL,
          category VARCHAR(255) NOT NULL
      );
      ```
-
-4. Ensure the `config.php` file has the correct database credentials.
-
-5. Start your local server and navigate to the application directory.
-
-6. Access the application via your web browser:
-   - Add Product Page: `http://localhost/<your_directory>/main.php`
-   - View Products Page: `http://localhost/<your_directory>/showdata.php`
-
----
-
-## Usage
-
-1. Navigate to the **Add Product** page.
-2. Fill in the product name, price, and category, then click "Submit."
-3. To view the product list, click the "Show Data" button.
+4. Update the database credentials in `config/config.php` if necessary:
+   ```php
+   private $localhost = "localhost";
+   private $username = "root";
+   private $password = ""; // Add your password if any
+   private $database = "student";
+   ```
+5. **Run the Application:**
+   - Open your browser and navigate to: `http://localhost/project-folder/index.php`.
 
 ---
 
+### Files Description
+#### `index.php`
+- Main page to add new products.
+- Form to submit product details (name, price, category).
 
+#### `showdata.php`
+- Displays all products in a table.
+- Includes options to **Edit** or **Delete** products.
+
+#### `updatedata.php`
+- Handles the updating of product details.
+- Pre-fills the form with existing data for easy modification.
+
+#### `config/config.php`
+- Contains the `Config` class for:
+  - Connecting to the database.
+  - CRUD operations (`insertDatabase`, `selectDatabase`, `removeProduct`, `updateProduct`).
+
+---
+
+### Functionality Workflow
+1. **Adding Products:**
+   - Input product details in `index.php` form.
+   - Data is inserted into the `product` table using the `insertDatabase` method.
+
+2. **Viewing Products:**
+   - `showdata.php` fetches all records from the `product` table via the `selectDatabase` method.
+
+3. **Editing Products:**
+   - Click **Edit** on a product row in `showdata.php`.
+   - Product data is passed to `updatedata.php` through session variables.
+   - Modify the details and submit to update the database.
+
+4. **Deleting Products:**
+   - Click **Delete** on a product row in `showdata.php`.
+   - The product is removed using the `removeProduct` method.
+
+---
+
+### Dependencies
+- **PHP Sessions:** Used to pass data between pages.
+- **Bootstrap 5.3.3:** For styling and responsive layout.
+
+---
+
+
+---
+
+### Notes
+- Ensure the database credentials are correct to avoid connection errors.
+- Use `header('Refresh:0');` or `header('Location: ...')` after database operations to reflect changes immediately.
+
+---
 
 ## Screenshots
 
