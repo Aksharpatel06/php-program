@@ -135,10 +135,7 @@ A form to input update product details..
 
 
 
-https://github.com/user-attachments/assets/50cc7620-28fc-4c7e-886c-3276019703d9
 
-
-https://github.com/user-attachments/assets/fff22acf-54ee-4ea0-b90c-56f24a8e93af
 
 
 
@@ -153,6 +150,11 @@ Watch the video demonstration of the project to see it in action:
 
 https://github.com/user-attachments/assets/6c4a0980-dcc3-4723-bccf-1e089acd940e
 
+
+https://github.com/user-attachments/assets/50cc7620-28fc-4c7e-886c-3276019703d9
+
+
+https://github.com/user-attachments/assets/fff22acf-54ee-4ea0-b90c-56f24a8e93af
 
 ---
 
