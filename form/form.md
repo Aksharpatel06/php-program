@@ -133,6 +133,17 @@ A form to input update product details..
 
 ![scn3](https://github.com/user-attachments/assets/4fbff67c-a31d-4005-925d-ab15d9181fe0)
 
+
+
+https://github.com/user-attachments/assets/50cc7620-28fc-4c7e-886c-3276019703d9
+
+
+https://github.com/user-attachments/assets/fff22acf-54ee-4ea0-b90c-56f24a8e93af
+
+
+
+
+
 ---
 
 ## Video Demonstration
