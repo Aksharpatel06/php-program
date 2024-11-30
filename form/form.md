@@ -151,12 +151,12 @@ Watch the video demonstration of the project to see it in action:
 https://github.com/user-attachments/assets/6c4a0980-dcc3-4723-bccf-1e089acd940e
 
 
-
+A CRUD API allows Create, Read, Update, and Delete operations for managing resources :
 
 https://github.com/user-attachments/assets/378de631-69c6-4a0f-9ae7-988895fbea05
 
 
-
+Postman :
 
 https://github.com/user-attachments/assets/fff22acf-54ee-4ea0-b90c-56f24a8e93af
 
