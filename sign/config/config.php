@@ -21,14 +21,24 @@ class UserConfig{
         return $insertData;
     }
 
-    function signIn($email,$password)
+    public function signIn($email,$password)
     {
-        $query = "SELECT * FROM $this->table WHERE email='$email'";
+        $query = "SELECT * FROM $this->table WHERE email='$email'"; 
+        
         $selectData = mysqli_query($this->create, $query);
         $data =mysqli_fetch_assoc($selectData);
-        $defaultPassword=$data['password'];
-        $status = password_verify($password,$defaultPassword);
-        return $status;
+        $defaultPassword = $data['password'];
+
+
+        $res = password_verify($password, $defaultPassword);
+
+        echo $res;
+        
+        if ($res) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
