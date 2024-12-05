@@ -84,13 +84,32 @@ This project provides a simple PHP-based REST API for managing employees in a My
 
 ---
 
+## Video Demonstration
+
+Check out our **[video demonstration](#)** to see the API in action! The video walks through:
+
+1. Setting up the project environment.
+
+
+
+https://github.com/user-attachments/assets/03bf1e80-9782-4ed5-8ae4-60af6c5c3061
+
+
+
+2. Sending API requests using tools like Postman.
+
+
+
+
+https://github.com/user-attachments/assets/b5edfb66-e451-4f41-9664-8d99ed78a69c
+
+
+
+---
+
 ## Notes
 
 - Always validate user input to avoid SQL injection risks.
 - Customize CORS headers if integrating with a frontend.
 
----
 
-## License
-
-This project is open source and available under the MIT License.
