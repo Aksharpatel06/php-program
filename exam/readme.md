@@ -117,14 +117,11 @@ A video showcasing the project is available, covering:
 https://github.com/user-attachments/assets/d1733788-0665-4e0c-bbeb-89b786da453e
 
 
-
-- Testing each API in Postman.
+Testing each API in Postman.
 
 
 https://github.com/user-attachments/assets/b49fbe4e-460f-4d39-b545-5f1737502bf9
 
-
----
 
 ## Feedback and Contributions
 
