@@ -1,6 +1,5 @@
 
 
-```markdown
 # PHP RESTful API with CRUD Operations
 
 ## Overview
